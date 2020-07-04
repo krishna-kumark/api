@@ -9,6 +9,7 @@ from faker import Faker
 faker = Faker()
 
 def updatedb():
+
     for _ in range 10:
         user = User(faker.name(),faker.phone_number(), fake.pytimezone())
         user.save()
@@ -19,7 +20,7 @@ def updatedb():
 
 
 class Command(BaseCommand):
-    help = 'Populate glucose table with random dummy data.'
+    help = 'Populate database with random dummy data.'
     args = 'no arguments'
 
     def handle(self, **options):
